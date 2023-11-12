@@ -1,0 +1,8 @@
+# Name:
+# Question (b)
+print("Multiplication program")
+number = int(input("Enter times tables number "))
+# number = 7
+print("Multiplications of ", number)
+for i in range(12):
+ print(number*i)
