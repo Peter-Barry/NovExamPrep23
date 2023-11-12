@@ -6,3 +6,33 @@ number = int(input("Enter times tables number "))
 print("Multiplications of ", number)
 for i in range(12):
  print(number*i)
+
+
+"""
+(i) Currently the first line that is printed by the program is “Multiplication program”.
+Change the program so that the first line printed is “Times Table program”.
+When the program is run the output may now look as follows:
+
+(ii) Update the program so that a row of asterisks appears above and below the line which
+outputs “Times Table program”.
+When the program is run the output may now look as follows:
+
+(iii) Amend the program to ask for and accept the user's choice of number to be used as
+the multiplier. Store the entered number in the variable called number.
+When the program is run and the user enters 8 as the number, the output may now
+look as follows:
+
+(iv) Currently the user can enter a negative number. Negative numbers should not be
+allowed in this program. Amend the program so that the times table is not printed out
+and an appropriate error message is displayed if the user enters a negative number.
+When the program is run and the user enters -2 as the number, the output may now
+look as follows:
+
+(v) Times tables normally shows the result of multiplying a specific number by zero to
+twelve inclusive. Amend the program so it displays the results of multiplying the
+entered number by zero to twelve inclusive.
+When the program is run and the user enters the number 8, the output may now look
+as follows:
+
+
+"""
