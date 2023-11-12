@@ -1,0 +1,92 @@
+from random import choice
+from random import randint
+
+def guess_name(max_guesses_allowed):
+    names = ["Alice", "Bob", "Charlie", "Diana", "Eve"]  # List of names to guess from
+    secret_name = choice(names)
+    secret_number = randint(1, 5)
+
+    guess_count = 0
+    user_guess = ""
+#   (vi)guesses = []
+#   guesses = [] # (vi)
+
+    print("Welcome to the name guessing game!")
+    print("You have a maximum of", max_guesses_allowed, "guesses.")
+    while (user_guess != secret_name):
+
+#(iii)   while user_guess != secret_name: #and guess_count < max_guesses_allowed:
+        user_guess = input("Enter your guess: ")
+        guess_count += 1  # Increase guess count by 1 for each attempt
+#       (vi) start       
+#       if user_guess in guesses:
+#             print("you already guessed",user_guess)
+#        guesses.append(user_guess)
+#        (vi) end
+        if user_guess == secret_name:
+            print("Congratulations! You guessed the name correctly:", secret_name)
+
+#(i)        print("You took", guess_count, "guesses.")
+#(ii) - start
+#       elif user_guess < secret_name:
+            #print("Sorry! Your guess was too low")
+#       else user_guess >= secret_name:
+            #print("Sorry! Your guess was too high")
+#(ii)  end
+        else:
+            print("Incorrect guess. Try again!")
+    
+    
+# Initiate the game with a maximum of 3 guesses
+guess_name(3)
+#(iv)
+# num_guesses_allowed = int(input("Enter the maximum number of guesses allowed: "))
+# guess_game(num_guesses_allowed)
+#(iv)
+
+"""
+(v)
+difficulty = input("Enter difficulty E(asy) or H(ard): ")
+if difficulty.upper() == "H":
+    secret_number = randint(1, 100)
+else:
+    secret_number = randint(1, 5)
+
+"""
+
+"""
+Make the following changes to the program:
+(i) Change the program to display an extra line of output when the user wins, showing the number of guesses taken.When the program is run the output may now look as follows:
+Welcome to the guessing game!
+    
+(ii) The program does not display a message unless the user guesses the secret number.
+Change the program so that it displays one of the following messages as a hint to the user:
+‘Sorry! Your guess was too low’ or ‘Sorry! Your guess was too high’
+When the program is run the output may now look as follows:
+
+(iii) Currently the program has no way of ending unless the user guesses the secret
+number.
+Change the program so that it does not allow the user more than three guesses. This is
+the value currently being passed into the function.
+Hint: You will need to change the loop so that it continues as long as the user’s guess
+is not equal to the secret number and the number of guesses is less than
+max_guesses_allowed.
+
+(iv)Currently the number of guesses that the user is allowed is hard coded to three.
+Modify the program so that the user is presented with the prompt:
+Enter the maximum number of guesses allowed.
+Store the value entered as an integer and pass this value into the function
+guess_game.
+When the program is run the output may now look as follows:
+
+v)Currently the secret number is always between 1 and 5 inclusive.
+Modify the program so that it prompts the user to enter a difficulty level – ‘E’ for easy
+and ‘H’ for hard. If the user chooses ‘H’ the secret number should be between 1 and
+100 inclusive. A value of anything other than ‘H’ can be interpreted as easy.
+When the program is run the output may now look as follows:
+
+(vi) Modify the code so that if the user guesses a number that was already guessed the following message is displayed: ‘You already guessed this number.’
+When the program is run the output may now look as follows:
+
+"""
+
