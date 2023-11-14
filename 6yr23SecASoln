@@ -1,0 +1,42 @@
+# Question 16(a)
+# Examination Number:
+from random import randint
+
+def guess_game(max_guesses_allowed):
+    # (v) - start
+    difficulty = input("Enter difficulty E(asy) or H(ard): ")
+    if difficulty.upper() == "H":
+        secret_number = randint(1, 100)
+    else:
+        secret_number = randint(1, 5)
+    # (v) - end
+    guess_count = 0
+    user_guess = 0
+    guesses = [] # (vi)
+
+    while (user_guess != secret_number) and (guess_count < max_guesses_allowed): 
+    #(iii)
+
+        user_guess = int(input("Enter your guess: "))
+        guess_count += 1
+        # (vi) - start
+        if user_guess in guesses:
+            print("You already guessed this number.")
+        guesses.append(user_guess)
+        # (vi) - end
+
+        if user_guess == secret_number:
+            print("Congratulations! You win!")
+            print("You took", guess_count, "guesses") # (i)
+        # (ii) - start
+        elif user_guess < secret_number:
+            print("Sorry! Your guess was too low")
+        else:
+            print("Sorry! Your guess was too high")
+        # (ii) - end
+
+print("Welcome to the guessing game!")
+# (iv) - start
+num_guesses_allowed = int(input("Enter the maximum number of guesses allowed: "))
+guess_game(num_guesses_allowed) 
+# (iv) end
