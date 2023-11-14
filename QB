@@ -1,5 +1,26 @@
 # Name:
 # Question (b)
+# (ii)
+print("*********************")
+# (i)
+print("Times Table Program")
+# (ii)
+print("*********************")
+# (iii)
+number = int(input("Enter times tables number "))
+print("Multiplications of ", number)
+#(v) change the loop guard from 10 to 13(allow for 0) for i in range (10): 
+for i in range(13):
+# (iv)
+    if number <= 0:
+        print(number, "This program does not support negative numbers")
+        break
+    #(vi)
+    print(number, " * ",i," ",number*i)
+    
+"""
+# Name:
+# Question (b)
 print("Multiplication program")
 number = int(input("Enter times tables number "))
 # number = 7
@@ -7,8 +28,6 @@ print("Multiplications of ", number)
 for i in range(12):
  print(number*i)
 
-
-"""
 (i) Currently the first line that is printed by the program is “Multiplication program”.
 Change the program so that the first line printed is “Times Table program”.
 When the program is run the output may now look as follows:
